@@ -1,0 +1,27 @@
+<section class="relative py-20 overflow-hidden">
+    <div class="w-full lg:w-2/3 xl:w-1/2 mb-14 lg:mb-0">
+        <div>
+            <h1 class="font-heading text-5xl xs:text-6xl md:text-7xl font-bold mb-6"><span>News</span></h1>
+        </div>
+    </div>
+    <div class="flex flex-wrap -mx-4 -mb-12">
+        <div *ngFor="let item of dataArray; let i = index;"
+            class="w-full md:w-1/2 xl:w-1/4 mb-12 border-r border-gray-100">
+            <a class="flex flex-col h-full px-4 group relative" href="{{item.url}}" target="_blank">
+                <div class="aspect-h-9 aspect-w-16 overflow-hidden"> <img class="block w-full mb-4"
+                        src="{{item.urlToImage}}" alt="{{item.title}}" /></div>
+                <span class="block text-gray-500 mb-2">{{item.publishedAt | date}}</span>
+                <h4 class="text-2xl font-semibold text-gray-900 group-hover:text-angular-900 mb-4 line-clamp-3">
+                    {{item.title}}</h4>
+                <p class="text-gray-500 text-lg line-clamp-4 mb-4">{{item.description}}</p>
+                <div
+                    class="relative group mt-auto mb-0 ml-auto w-24 text-center flex-shrink-0 inline-block py-2 px-4 text-xs font-semibold text-angular-50 rounded-md bg-angular-900 overflow-hidden">
+                    <div
+                        class="absolute top-0 right-full w-full h-full bg-gray-900 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500">
+                    </div>
+                    <span class="relative">Read</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
