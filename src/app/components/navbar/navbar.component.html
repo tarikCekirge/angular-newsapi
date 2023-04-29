@@ -1,0 +1,100 @@
+<section>
+    <nav class="relative py-6 bg-transparent z-50">
+        <div class="container px-4 mx-auto">
+            <div class="flex items-center"><a class="inline-block text-lg font-bold" routerLink=""><img class="h-10"
+                        src="assets/images/a-news.svg" alt="" width="auto" /></a>
+                <div class="lg:hidden ml-auto">
+                    <button (click)="toggleMenu()"
+                        class="navbar-burger flex w-12 h-12 items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-md transition duration-200">
+                        <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12H21" stroke="black" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            <path d="M3 6H21" stroke="black" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            <path d="M3 18H21" stroke="black" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="hidden lg:flex ml-14 lg:w-auto lg:space-x-12">
+                    <li>
+                        <a class="inline-block text-sm text-gray-900 hover:text-angular-900 font-medium"
+                            (click)="resetToggle()" routerLink="business">Business</a>
+                    </li>
+                    <li>
+                        <a class="inline-block text-sm text-gray-900 hover:text-angular-900 font-medium"
+                            (click)="resetToggle()" routerLink="technology">Technology</a>
+                    </li>
+                    <li>
+                        <a class="inline-block text-sm text-gray-900 hover:text-angular-900 font-medium"
+                            (click)="resetToggle()" routerLink="sports">Sports</a>
+                    </li>
+                    <li>
+                        <a class="inline-block text-sm text-gray-900 hover:text-angular-900 font-medium"
+                            (click)="resetToggle()" routerLink="sience">Sience</a>
+                    </li>
+                    <li>
+                        <a class="inline-block text-sm text-gray-900 hover:text-angular-900 font-medium"
+                            (click)="resetToggle()" routerLink="general">General</a>
+                    </li>
+                    <li>
+                        <a class="inline-block text-sm text-gray-900 hover:text-angular-900 font-medium"
+                            (click)="resetToggle()" routerLink="entertainment">Entertainment</a>
+                    </li>
+                    <li>
+                        <a class="inline-block text-sm text-gray-900 hover:text-angular-900 font-medium"
+                            routerLink="health">Health</a>
+                    </li>
+                </ul>
+                <div class="hidden lg:block ml-auto"> </div>
+            </div>
+        </div>
+    </nav>
+    <div [ngClass]="{'hidden': isHidden}" class="navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-md z-50">
+        <div class=" navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <nav class="relative flex flex-col py-6 px-10 w-full h-full bg-white border-r overflow-y-auto">
+            <div class="flex items-center mb-16"><a class="mr-auto text-2xl font-medium leading-none" routerLink=""><img
+                        class="h-10" src="assets/images/a-news.svg" alt="" width="auto" /></a>
+                <button class="navbar-close" (click)="toggleMenu()">
+                    <svg class="h-6 w-6 text-gray-500 cursor-pointer hover:text-gray-500"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <div>
+                <ul class="mb-2">
+                    <li>
+                        <a class="block py-4 px-5 text-gray-900 hover:bg-angular-50 rounded-lg" (click)="resetToggle()"
+                            routerLink="business">Business</a>
+                    </li>
+                    <li>
+                        <a class="block py-4 px-5 text-gray-900 hover:bg-angular-50 rounded-lg" (click)="resetToggle()"
+                            routerLink="technology">Technology</a>
+                    </li>
+                    <li>
+                        <a class="block py-4 px-5 text-gray-900 hover:bg-angular-50 rounded-lg" (click)="resetToggle()"
+                            routerLink="sports">Sports</a>
+                    </li>
+                    <li>
+                        <a class="block py-4 px-5 text-gray-900 hover:bg-angular-50 rounded-lg" (click)="resetToggle()"
+                            routerLink="sience">Sience</a>
+                    </li>
+                    <li>
+                        <a class="block py-4 px-5 text-gray-900 hover:bg-angular-50 rounded-lg" (click)="resetToggle()"
+                            routerLink="general">General</a>
+                    </li>
+                    <li>
+                        <a class="block py-4 px-5 text-gray-900 hover:bg-angular-50 rounded-lg" (click)="resetToggle()"
+                            routerLink="entertainment">Entertainment</a>
+                    </li>
+                    <li>
+                        <a class="block py-4 px-5 text-gray-900 hover:bg-angular-50 rounded-lg" (click)="resetToggle()"
+                            routerLink="health">Health</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</section>
